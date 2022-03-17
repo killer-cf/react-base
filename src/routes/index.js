@@ -1,15 +1,15 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Login from '../pages/Login/index';
 import Page404 from '../pages/Page404/index';
 
 function Rotas() {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="*" element={<Page404 />} />
-    </Routes>
+    <Switch>
+      <Route exact path="/" component={Login} />
+      <Route path="*" component={Page404} />
+    </Switch>
   );
 }
 
