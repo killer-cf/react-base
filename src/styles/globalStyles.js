@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { primaryDarkColor, primaryColor } from '../config/colors';
+import { primaryDarkColor, primaryColor, errorColor, sussessColor } from '../config/colors';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
 
@@ -41,7 +42,21 @@ ul{
   list-style: none ;
 }
 
-container{
+body .Toastify .Toastify__toast-container .Toastify__toast--success {
+  background-color: ${sussessColor};
+}
 
+body .Toastify .Toastify__toast-container .Toastify__toast--error {
+  background-color: ${errorColor};
 }
 `;
+/*
+export const Container = styled.section`
+  max-width: 500px;
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: o o 10px rgba(0, 0, 0, 0.1);
+`;
+*/
